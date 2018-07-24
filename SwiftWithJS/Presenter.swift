@@ -7,13 +7,23 @@
 //
 
 import Foundation
+import JavaScriptCore
 
 protocol View {
     func setResult(result: String)
+    func setCopyRightInfo(info: String)
 }
 
 class Presenter {
     var view: View?
+    let computationJSBridge = ComputationJSBridge()
+
+    func viewDidLoad() {
+        if let copyrightObj = CopyRightJSBridge().get() {
+            view?.setCopyRightInfo(info: copyrightObj.info)
+        }
+    }
+
     func addButtonTapped(argument1: String?, argument2: String?) {
         view?.setResult(result: process(text1: argument1, text2: argument2, op: .Add))
     }
@@ -33,13 +43,9 @@ class Presenter {
     private func process(text1: String?, text2: String?, op: Operation) -> String {
         let input1 = parseInput(text: text1)
         let input2 = parseInput(text: text2)
-
-        switch op {
-        case .Add     : return String(input1 + input2)
-        case .Subtract: return String(input1 - input2)
-        case .Multiply: return String(input1 * input2)
-        default       : return String(input1 / input2)
-        }
+        let computationObject = ComputationObject(argument1: input1,
+                                                  argument2: input2)
+        return computationJSBridge.compute(functionName: op.functionName(), computationObject: computationObject)
     }
 
     private func parseInput(text: String?) -> Double {
@@ -51,11 +57,4 @@ class Presenter {
         }
         return Double(val) ?? 0
     }
-}
-
-enum Operation {
-    case Add
-    case Subtract
-    case Multiply
-    case Divide
 }

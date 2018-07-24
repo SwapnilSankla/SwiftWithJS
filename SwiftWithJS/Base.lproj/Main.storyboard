@@ -78,11 +78,21 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Footer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdY-VB-cjP">
+                                <rect key="frame" x="16" y="629" width="342" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.56713991116751261" green="0.56713991116751261" blue="0.56713991116751261" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cdY-VB-cjP" secondAttribute="bottom" constant="20" id="0mh-8T-JdE"/>
                             <constraint firstItem="3BL-8P-u9I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="16p-IK-SGY"/>
+                            <constraint firstItem="cdY-VB-cjP" firstAttribute="trailing" secondItem="3BL-8P-u9I" secondAttribute="trailing" id="M1m-5r-mGV"/>
+                            <constraint firstItem="cdY-VB-cjP" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3BL-8P-u9I" secondAttribute="bottom" constant="10" id="Nq1-HS-a1h"/>
                             <constraint firstItem="3BL-8P-u9I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Xhq-9g-der"/>
+                            <constraint firstItem="cdY-VB-cjP" firstAttribute="leading" secondItem="3BL-8P-u9I" secondAttribute="leading" id="YR1-lb-qHB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3BL-8P-u9I" secondAttribute="trailing" constant="17" id="nTn-ha-nHy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -93,6 +103,7 @@
                         <outlet property="addButton" destination="oK8-zl-dYi" id="flE-uP-Ffg"/>
                         <outlet property="argument1" destination="MR3-e0-enY" id="LG2-TB-4J0"/>
                         <outlet property="argument2" destination="qhf-Of-yiw" id="djF-mq-NrU"/>
+                        <outlet property="footerView" destination="cdY-VB-cjP" id="4R4-zD-KTZ"/>
                         <outlet property="result" destination="agr-h2-xlq" id="U65-Z1-6KX"/>
                         <outlet property="subtractButton" destination="DjN-SU-mhh" id="9y5-W7-hyz"/>
                     </connections>

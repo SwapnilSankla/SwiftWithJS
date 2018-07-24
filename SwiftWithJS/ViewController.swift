@@ -17,6 +17,8 @@ class ViewController: UIViewController, View {
     @IBOutlet weak var subtractButton: UIButton!
     @IBOutlet weak var MultiplyButton: UIButton!
     @IBOutlet weak var DivideButton: UIButton!
+    @IBOutlet weak var footerView: UILabel!
+    
     let presenter = Presenter()
 
     override func viewDidLoad() {
@@ -27,6 +29,7 @@ class ViewController: UIViewController, View {
         configureLayoutFor(button: subtractButton)
         configureLayoutFor(button: MultiplyButton)
         configureLayoutFor(button: DivideButton)
+        presenter.viewDidLoad()
     }
 
     @IBAction func addButtonTapped(_ sender: Any) {
@@ -51,6 +54,10 @@ class ViewController: UIViewController, View {
 
     func setResult(result: String) {
         self.result.text = result
+    }
+
+    func setCopyRightInfo(info: String) {
+        self.footerView.text = info
     }
 
     private func configureLayoutFor(button: UIButton) {

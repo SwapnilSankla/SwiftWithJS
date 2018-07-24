@@ -13,6 +13,13 @@
 		A5DE559C2105E3BF007A83C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5DE559B2105E3BF007A83C3 /* Assets.xcassets */; };
 		A5DE559F2105E3BF007A83C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5DE559D2105E3BF007A83C3 /* LaunchScreen.storyboard */; };
 		A5DE55A72105EF4E007A83C3 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE55A62105EF4E007A83C3 /* Presenter.swift */; };
+		A5DE55AA210607F9007A83C3 /* calc.js in Resources */ = {isa = PBXBuildFile; fileRef = A5DE55A9210607F9007A83C3 /* calc.js */; };
+		A5DE55AC2106F94C007A83C3 /* ComputationJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE55AB2106F94C007A83C3 /* ComputationJSBridge.swift */; };
+		A5DE55AE2106FA5E007A83C3 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE55AD2106FA5E007A83C3 /* Operation.swift */; };
+		A5DE55B02106FA7F007A83C3 /* ComputationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE55AF2106FA7F007A83C3 /* ComputationObject.swift */; };
+		A5DE55B62106FE3D007A83C3 /* CopyRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE55B52106FE3D007A83C3 /* CopyRight.swift */; };
+		A5DE55B82106FF43007A83C3 /* CopyRightJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DE55B72106FF43007A83C3 /* CopyRightJSBridge.swift */; };
+		A5DE55BA21070033007A83C3 /* copyright.js in Resources */ = {isa = PBXBuildFile; fileRef = A5DE55B921070033007A83C3 /* copyright.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		A5DE559E2105E3BF007A83C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A5DE55A02105E3BF007A83C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5DE55A62105EF4E007A83C3 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		A5DE55A9210607F9007A83C3 /* calc.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = calc.js; sourceTree = "<group>"; };
+		A5DE55AB2106F94C007A83C3 /* ComputationJSBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputationJSBridge.swift; sourceTree = "<group>"; };
+		A5DE55AD2106FA5E007A83C3 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		A5DE55AF2106FA7F007A83C3 /* ComputationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputationObject.swift; sourceTree = "<group>"; };
+		A5DE55B52106FE3D007A83C3 /* CopyRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyRight.swift; sourceTree = "<group>"; };
+		A5DE55B72106FF43007A83C3 /* CopyRightJSBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyRightJSBridge.swift; sourceTree = "<group>"; };
+		A5DE55B921070033007A83C3 /* copyright.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = copyright.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,46 @@
 		A5DE55932105E3BE007A83C3 /* SwiftWithJS */ = {
 			isa = PBXGroup;
 			children = (
+				A5DE55B42106FE13007A83C3 /* Copyright */,
+				A5DE55A8210607EB007A83C3 /* JS */,
 				A5DE55942105E3BE007A83C3 /* AppDelegate.swift */,
 				A5DE55962105E3BE007A83C3 /* ViewController.swift */,
 				A5DE55A62105EF4E007A83C3 /* Presenter.swift */,
+				A5DE55B32106FDF6007A83C3 /* Computation */,
 				A5DE55982105E3BE007A83C3 /* Main.storyboard */,
 				A5DE559B2105E3BF007A83C3 /* Assets.xcassets */,
 				A5DE559D2105E3BF007A83C3 /* LaunchScreen.storyboard */,
 				A5DE55A02105E3BF007A83C3 /* Info.plist */,
 			);
 			path = SwiftWithJS;
+			sourceTree = "<group>";
+		};
+		A5DE55A8210607EB007A83C3 /* JS */ = {
+			isa = PBXGroup;
+			children = (
+				A5DE55A9210607F9007A83C3 /* calc.js */,
+				A5DE55B921070033007A83C3 /* copyright.js */,
+			);
+			path = JS;
+			sourceTree = "<group>";
+		};
+		A5DE55B32106FDF6007A83C3 /* Computation */ = {
+			isa = PBXGroup;
+			children = (
+				A5DE55AF2106FA7F007A83C3 /* ComputationObject.swift */,
+				A5DE55AD2106FA5E007A83C3 /* Operation.swift */,
+				A5DE55AB2106F94C007A83C3 /* ComputationJSBridge.swift */,
+			);
+			path = Computation;
+			sourceTree = "<group>";
+		};
+		A5DE55B42106FE13007A83C3 /* Copyright */ = {
+			isa = PBXGroup;
+			children = (
+				A5DE55B52106FE3D007A83C3 /* CopyRight.swift */,
+				A5DE55B72106FF43007A83C3 /* CopyRightJSBridge.swift */,
+			);
+			path = Copyright;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +170,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5DE55BA21070033007A83C3 /* copyright.js in Resources */,
 				A5DE559F2105E3BF007A83C3 /* LaunchScreen.storyboard in Resources */,
+				A5DE55AA210607F9007A83C3 /* calc.js in Resources */,
 				A5DE559C2105E3BF007A83C3 /* Assets.xcassets in Resources */,
 				A5DE559A2105E3BE007A83C3 /* Main.storyboard in Resources */,
 			);
@@ -141,6 +188,11 @@
 				A5DE55A72105EF4E007A83C3 /* Presenter.swift in Sources */,
 				A5DE55972105E3BE007A83C3 /* ViewController.swift in Sources */,
 				A5DE55952105E3BE007A83C3 /* AppDelegate.swift in Sources */,
+				A5DE55AE2106FA5E007A83C3 /* Operation.swift in Sources */,
+				A5DE55B62106FE3D007A83C3 /* CopyRight.swift in Sources */,
+				A5DE55B02106FA7F007A83C3 /* ComputationObject.swift in Sources */,
+				A5DE55B82106FF43007A83C3 /* CopyRightJSBridge.swift in Sources */,
+				A5DE55AC2106F94C007A83C3 /* ComputationJSBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
